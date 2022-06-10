@@ -1,0 +1,180 @@
+:root{
+  
+    --fuenteParrafos: 'DM Sans', sans-serif;
+    
+     /* ## Colors */
+    --gris: #e1e1e1;
+    --blanco: #ffffff;
+    --negro: #000000;
+   
+    /* ### Primary */
+    --Softred: hsl(10, 79%, 65%);
+    --Cyan: hsl(186, 34%, 60%);
+
+    /* ### Neutral */
+    --Darkbrown: hsl(25, 47%, 15%);
+    --Mediumbrown: hsl(28, 10%, 53%);
+    --Cream: hsl(27, 66%, 92%);
+    --Verypaleorange: hsl(33, 100%, 98%);
+}
+
+html{
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+body{
+    font-family: var(--fuenteParrafos);
+    font-size: 18px;
+    line-height: 2;
+    background-color: var(--Cream);
+    line-height: 1.4;
+}
+
+/** Globales **/
+
+.contenedor-mobile{
+    max-width: 375px;
+    width: 95%;
+    margin: 10rem auto;
+}
+@media (min-width: 1440px) {
+    .contenedor{
+        max-width: 60rem ;
+        width: 90%;
+        margin: 10rem auto;
+    }
+}
+a{
+    text-decoration: none;
+}
+h1, h2, h3, h4{
+    line-height: 1.2;
+}
+h1{
+    font-size: 4.8rem;
+}
+h2{
+    font-size: 4rem;
+}
+h3{
+    font-size: 3.2rem;
+}
+h4{
+    font-size: 2.8rem;
+}
+img{
+    max-width: 100%;
+}
+p{
+    margin: 0;
+    color: var(--blanco);
+}
+span{
+    margin: 0;
+}
+
+/*Estilos del componente card-balance*/
+.precio{
+    font-weight: 700;
+    font-size: 3rem;
+    color: var(--blanco);
+}
+.card-balance{
+    background-color: var(--Softred);
+    padding: 2rem;
+    border-radius: 1rem;
+}
+.flex{
+    display: flex;
+    justify-content: space-between;
+}
+
+/*Estilos del componente card-spending*/
+.card-spending{
+    margin-top: 2rem;
+    background-color: var(--Verypaleorange);
+    padding: 2rem;
+    border-radius: 1rem;
+}
+.h-spending{
+    color: var(--Darkbrown);
+    margin: 1rem 0 3rem 0;
+    font-size: 2.4rem;
+}
+.total-spending{
+    
+    color: var(--Mediumbrown);
+    font-size: 1.6rem;
+}
+.precio-spending{
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--Darkbrown);
+}
+.porcentaje{
+    text-align: right;
+    color: var(--Darkbrown);
+    font-weight: 700;
+}
+.porcentaje span{
+    display: block;
+    color: var(--Mediumbrown);
+    font-weight: 400;
+    font-size: 1.6rem;
+}
+.flex-spending{
+    display: flex;
+    margin-top: 2rem;
+    justify-content: space-between;
+    align-items: flex-end;
+    
+}
+.barrita{
+    margin-top: 2rem;
+    width: 100%;
+    height: 2px;
+    background-color: var(--Cream);
+}
+
+/*Grafica de barras*/
+.grid-dias{
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    column-gap: .7rem;
+    
+}
+.barra{
+    background-color: var(--Softred);
+    width: 3.6rem;
+    height: 0;
+    border-radius: 3px;
+    margin-top: 2rem;
+    cursor: pointer;
+    
+}
+.barra:hover{
+    background-color: var(--Cyan);
+    transition: .3s;
+}
+
+.dia-semana{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: end;
+}
+.dia-barra{
+    color: var(--Mediumbrown);
+    font-size: 1.4rem;
+    text-align: center;
+    
+}
+.ocultar{
+    visibility: hidden;
+}
+.mostrar{
+    visibility: visible;
+}
