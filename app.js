@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded',() => {
 })
 
 const consutarAPI = async () => {
-    const url = 'http://localhost:5500/data.json'
+    const url = 'data.json'
     const respuesta = await fetch(url)
     const resultado = await respuesta.json()
     generarGraficas(resultado)
