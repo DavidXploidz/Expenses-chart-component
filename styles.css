@@ -1,0 +1,131 @@
+:root{
+    --fuentePrincipal: 'DM Sans', sans-serif;
+
+    /*********** Colores ************/
+    /* ### Primarios */
+    --SoftRed: hsl(10, 79%, 65%);
+    --Cyan: hsl(186, 34%, 60%);
+
+    /* ### Neutrales */
+    --DarkBrown: hsl(25, 47%, 15%);
+    --MediumBrown: hsl(28, 10%, 53%);
+    --Cream: hsl(27, 66%, 92%);
+    --VeryPaleOrange: hsl(33, 100%, 98%);
+}
+body{
+    background-color: var(--Cream);
+    font-size: 18px;
+    font-family: var(--fuentePrincipal);
+}
+.contenedor{
+    max-width: 375px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+}
+@media (min-width: 600px){ 
+    .contenedor{
+        max-width: 400px;
+        margin-left: auto;
+        margin-right: auto;
+        width: 90%;
+    }
+}
+/* Estilos personalizados */
+.head-component{
+    background-color: var(--SoftRed);
+    border-radius: 10px;
+    padding: 10px 20px;
+}
+.head-component p{
+    margin: 0;
+    color: var(--VeryPaleOrange);
+}
+.head-component p span{
+    font-weight: 700;
+    font-size: 32px;
+}
+.card-graficas{
+    background-color: var(--VeryPaleOrange);
+    border-radius: 10px;
+    padding: 10px 20px;
+}
+.title-spending{
+    font-size: 25px;
+    font-weight: 700;
+    color: var(--DarkBrown);
+}
+.barra-divisora{
+    height: 2px;
+    width: 100%;
+    background-color: var(--Cream);
+    border-radius: 25px;
+}
+.sub-title p{
+    color: var(--MediumBrown);
+    margin: 0;
+}
+.sub-title span{
+    color: var(--DarkBrown);
+    font-weight: 700;
+    font-size: 32px;
+}
+.last-month p{
+    font-weight: 700;
+    color: var(--DarkBrown);
+    text-align: right;
+    margin: 0;
+}
+.last-month p span{
+    color: var(--MediumBrown);
+    font-weight: 400;
+}
+#contenedor-graficas{
+    display: flex;
+    justify-content: space-between;
+}
+.barra{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: end;
+}
+.barra:hover{
+    cursor: pointer;
+}
+.barra div{
+    background-color: var(--SoftRed);
+    height: 50px;
+    width: 30px;
+    border-radius: 3px;
+    position: relative;
+}
+.barraAzul{
+    background-color: var(--Cyan) !important;
+}
+.barra p{
+    font-size: 12px;
+    color: var(--MediumBrown);
+}
+.infoOculta{
+    background-color: var(--DarkBrown) !important;
+    color: white;
+    font-weight: bold;
+    font-size: 12px;
+    padding: 2px;
+    position: absolute;
+    top: -30px;
+    left: -12%;
+    text-align: center;
+    height: 22px !important;
+    width: 40px !important;
+    opacity: 1;
+}
+@media (min-width: 600px){ 
+    .infoOculta{
+        opacity: 0;
+    }
+}
+#contenedor-graficas .barra:hover div .infoOculta{
+    opacity: 1;
+}
